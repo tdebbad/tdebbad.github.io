@@ -1,0 +1,178 @@
+
+<!-- Things it still needs,
+    1. A way to store the information once it is submitted.
+    2. A way for him to get to this site, whether by email or by other means
+    3. Any styling improvements or missing features (Ex. Password Validation, improved form, transition, no dead links)
+    4. Put on a domain that looks realistic.
+-->
+
+<style>
+body {
+    background-image: linear-gradient(141deg, #0045a2 0%, #a644e5 100%);
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 98vh;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.page-table { display: table; padding: 2em 0; position: relative; width: 100%; height: 100%; }
+
+.page-cell { 
+    display: table-cell; 
+    text-align: center; 
+    vertical-align: middle; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.reset-password-screen { margin: .25em 0 1.5em; }
+
+.avatar-circle { 
+    background: #fff url(../images/dh_logomark-blue.svg) no-repeat center center; 
+    background-size: 100% 100%; border: 8px solid rgba(114, 142, 161, 0.1); border-radius: 50%; 
+    display: inline-block; overflow: hidden; 
+}
+
+.avatar-circle img { background: #fff; display: block; }
+
+h1, h2, h3 {color: #020e13;font-weight: normal;margin: 0;}
+
+.Button { 
+    font-family: "Proxima Nova", sans-serif; color: #0073EC; background: transparent; 
+    border: solid 1px #0073EC; border-radius: 3px; display: inline-block; font-size: 1rem; 
+    line-height: 1rem; padding: 0.75rem 2rem 0.625rem; margin: 0; text-align: center; text-decoration: none; 
+    font-weight: 600; text-shadow: none; vertical-align: baseline; outline: none; transition: all 0.2s ease-in-out; 
+    cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
+}
+
+.Button--primary {background: #0073EC;color: #ffffff;border: solid 1px #0073EC; font-weight: normal;}
+
+.Button--primary:hover, .Button--primary:active, .Button--primary.is-open { color: #ffffff; background: #005ab9; border-color: #0073EC; }
+
+.page-logo { overflow: hidden; text-indent: 101%; white-space: nowrap; background: url("http://dreamhost.design/assets/downloads/logo/dh_logo-white.png"); background-repeat: no-repeat; background-size: 10em 1.4em; display: block; width: 10em; height: 2.125em; margin: 2em auto; }
+
+/* These lines add the input for */ 
+
+.form-default { font-size: 18px; font-size: 1.125rem; text-align: left; min-width: 375px;}
+
+.form-default fieldset { border: none; margin: 0; padding: 0; }
+
+.form-default .form-row { margin-top: 1em; }
+
+.form-default .form-row:first-of-type {margin-top: 0;}
+
+.form-default .form-footer { font-size: .7em; margin-top: 2em; text-align: center; }
+
+.form-default .form-footer p { font-size: 1em; }
+
+.form-default label { display: block; font-size: .75em; }
+
+.form-default label + input, .form-default label + select { margin-top: .5em; }
+
+.form-default p { font-size: .7em; margin: 0; }
+
+input + .form-default p, select + .form-default p { margin: .2em 0 0; }
+
+.form-default input { border-radius: 2px; background: #fff; border: 1px solid #AFBFCA; box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05); color: #020e13; font-size: 1em; padding: .5em; width: 100%; }
+
+.form-default input:focus { border-color: #2BADE9; outline: none; }
+
+.form-default input::-moz-selection { background: #ced8de; }
+
+.form-default input::selection { background: #ced8de; }
+
+.form-default input::-webkit-input-placeholder { color: #AFBFCA; }
+
+.form-default input:-moz-placeholder { color: #AFBFCA !important; }
+
+.form-default input::-moz-placeholder { color: #AFBFCA !important; }
+
+.form-default input:-ms-input-placeholder { color: #AFBFCA !important; }
+
+.form-default select { width: 100%; }
+
+.form-default .floating-label { position: relative; }
+
+.form-default .floating-label label { color: #2BADE9; font-size: .55em; opacity: 0; text-transform: uppercase; transition: opacity .2s, top .2s; position: absolute; top: 0; left: 1.1em; }
+
+.form-default .floating-label input:focus { padding-top: .75em; padding-bottom: .25em; }
+
+.form-default .floating-label input:focus + label { opacity: 1; top: .5em; }
+
+.form-default .floating-label input:focus::-webkit-input-placeholder { color: #fff; }
+
+.form-default .floating-label input:focus:-moz-placeholder { color: #fff !important; }
+
+.form-default .floating-label input:focus::-moz-placeholder { color: #fff !important; }
+
+.form-default .floating-label input:focus:-ms-input-placeholder { color: #fff !important; }
+
+.form-default .error input { border-color: #B80C03; }
+
+
+
+
+.page-wrap {color: #000000;display: inline-block;background-image: linear-gradient(130deg, #fff 0%, #E0E4E8 100%);border-radius: 3px;box-shadow: 0px 4px 10px 0px rgba(8, 13, 18, 0.3);font-size: 13px;font-size: 0.8125rem;padding: 3em;}
+
+</style>
+<head>
+    <title> Reset Password &#8226; Dreamhost</title>
+    <link rel="icon" href="DreamHostLogo.png">
+</head>
+<body> 
+    <div class="page-table">
+        <div class="page-cell">
+            <div class="page-wrap">
+                <div class="reset-password-screen">
+                    <div class="inline-block-expander"> <div>
+                </div>
+            <div>
+        </div>
+    </div>
+    <div style="color: red; font-size: 14px; font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        * Your Password is set to expire in 2 days <br>
+    </div>
+    <div class="forgot-password-avatar">
+        <div class="avatar avatar-circle"><img src="DreamHostLogo.png" width="80" height="80" ></div>
+    </div>
+    <h2 >Reset Password</h2>    
+    <!--<form method="post" action="sendEmail.php" onsubmit="YouWerePhished();" class="reset-password-form form-default"  >-->
+    <form onsubmit="YouWerePhished();" class="reset-password-form form-default"  >
+        <div class="form-row floating-label">
+            <p style="margin-top: 10px"></p>
+            <input type="email" name="email" id="email" placeholder="Email" autofocus="">
+            <label for="email">Email</label>
+            <p style="margin-top: 10px"></p>
+        </div>
+        <div class="form-row floating-label">
+            <input type="password" name="password" id="password" autocomplete="off" placeholder="New Password" required="">
+            <label for="password">Password</label>
+            <p style="margin-top: 10px"></p>
+        </div>
+        <div class="form-row floating-label">
+            <input type="password" name="password2" id="password" autocomplete="off" placeholder="Confirm New Password" required="">
+            <label for="password2">Password</label>
+        </div>
+        <div class="form-row form-footer">
+            <button type="submit" class="Button Button--primary" onclick="YouWerePhished">Reset my password</button>
+        </div>
+        </form>
+    </div>
+            </div>
+                <a class="page-logo" href="//dreamhost.com">DreamHost</a>
+            </div>
+        </div>
+</body>
+<script>
+function YouWerePhished() {
+    console.log(window.location.href);
+    alert("You were just phished by Section 11 Team 5! Better Luck next time.");
+  }
+
+  </script>
